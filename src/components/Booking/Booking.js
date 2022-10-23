@@ -3,15 +3,17 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { useLoaderData } from 'react-router-dom';
 
 
 const Booking = () => {
+  const desti =useLoaderData()
     return (
         
              <Container className=''>
         <Row>
           <Col  sm={11} lg={6} className='text-white'>
-          <h1 className='mt-5'>Cox's Bazar</h1>
+          <h1 className='mt-5'>{desti.name}</h1>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero totam eaque, dignissimos quos earum, veritatis delectus quae autem vitae nobis molestiae quo velit accusantium illo, ea veniam qui aliquam corporis.</p>
           </Col>
 
