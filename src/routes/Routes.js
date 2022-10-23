@@ -4,6 +4,7 @@ import Booking from '../components/Booking/Booking';
 import Home from '../components/Home/Home';
 import Login from '../components/Login/Login';
 import Register from '../components/Register/Register';
+import SelectTour from '../components/SelectTour/SelectTour';
 import Main from '../layout/Main';
 
 
@@ -16,7 +17,12 @@ import Main from '../layout/Main';
         children:[
             {
                 path:'/',
+                loader:async()=>{
+                    return fetch(`http://localhost:5000/destinations`)
+                },
                 element:<Home></Home>
+                
+
             },
             {
                 path:'/login',
@@ -26,9 +32,12 @@ import Main from '../layout/Main';
                 path:'/register',
                 element:<Register></Register>
             },
+            
+           
             {
-                path:'/booking',
-                element:<Booking></Booking>
+                path:'/booking/:id',
+                element:<Booking></Booking>,
+                loader:({params})=>fetch(`http://localhost:5000/destinations/${params.id}`)
             }
 
         ]

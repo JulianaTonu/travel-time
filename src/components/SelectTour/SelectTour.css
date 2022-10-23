@@ -1,0 +1,14 @@
+.card{
+    width: 220px;
+    height: 350px;
+    
+}
+
+img{
+    width: 290px;
+    height: 330px;
+   
+    /* margin: 10px; */
+    box-shadow: 2px 2px 2px rgb(110, 101, 101);
+}
+
