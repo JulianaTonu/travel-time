@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/UserContext';
 
 
@@ -15,7 +16,7 @@ const Home = () => {
     <div className="col-3 my-5 text-white text-center">
     <h1 className='mt-5'> Take a tour: {user?.displayName}</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor distinctio laborum inventore aliquam fugiat nemo nobis? Non similique mollitia deleniti. Explicabo atque suscipit provident nihil inventore, illum vero at magni?</p>
-            <button className='btn btn-warning'>Booking</button>
+            <button className='btn btn-warning'><Link to='/booking'>Booking</Link> </button>
     </div>
 
 

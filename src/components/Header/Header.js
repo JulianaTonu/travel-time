@@ -22,10 +22,10 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="">
             <NavLink className="px-3 ms-5 nav" to="/">Home</NavLink>
-            <NavLink className="px-3  nav" to="/bookroom">BookRoom</NavLink>
+            <NavLink className="px-3  nav" to="/booking">Booking</NavLink>
             <NavLink className="px-3  nav" to="/login">Login</NavLink>
             <NavLink className="px-3  nav" to="/register">Register</NavLink>
-            {user?.email && <span>welcome , {user?.email}</span>}
+            {user?.email && <span className='text-white'>welcome , {user?.email}</span>}
            
           </Nav>
         </Navbar.Collapse>

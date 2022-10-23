@@ -5,11 +5,14 @@ import Sreemongol from '../../images/Sreemongol.png'
 import sundorbon from '../../images/sundorbon.png'
 import CoxsBazar from '../../images/Rectangle 1.png'
 
+
 const SelectTour = () => {
+
+ 
     return (
         <div className="row ">
 
-        <div className="col-3 m-4">
+        <div  className="col-3 m-4">
        <img src={ CoxsBazar } className="rounded  " alt="..."/>
        <p className='text-white fw-bold text-center fs-20'>Cox's Bazar</p>
      </div>
