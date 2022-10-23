@@ -25,13 +25,33 @@ const Booking = () => {
 
       <Form.Group className="mb-3" controlId="formBasicOrigin">
         <Form.Label className='formlabel fw-bold'>Origin</Form.Label>
-        <Form.Control type="text" name="origin" placeholder="Enter origin" />  
+        <Form.Control type="text" name="origin" placeholder="" />  
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
+      <Form.Group className="mb-3 " controlId="formBasicPassword">
         <Form.Label className='formlabel fw-bold'>Destination</Form.Label>
         <Form.Control type="text" name="destination" placeholder="" />
       </Form.Group>
+
+
+
+      <Form.Group className="mb-3 d-flex ms-2 " controlId="formBasicPassword">
+
+       <div className='me-4'>
+
+       <Form.Label className='formlabel fw-bold '>Form</Form.Label>
+
+       <Form.Control type="date" name="form" placeholder="" />
+       </div>
+
+       <div>
+       <Form.Label className='formlabel fw-bold'>To</Form.Label>
+        <Form.Control type="date" name="to" placeholder="" />
+       </div>
+
+      </Form.Group>
+
+
       <button className='sub-btn ' type='submit'>Start Booking</button>
     </Form >
         </div></Col>
