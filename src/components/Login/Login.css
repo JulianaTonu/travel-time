@@ -1,0 +1,26 @@
+.login{
+    
+    margin-top: 60px;
+    margin-bottom: 212px;
+     /* border: 2px solid rgb(0, 229, 255); */
+     /* background-color: rgb(196, 243, 255); */
+     border: 0.5px solid rgb(161, 163, 163);
+     border-radius: 10px;
+     padding: 10px 15px;
+     box-shadow: 3px 4px 8px  rgb(130, 165, 165);
+ margin-left: 58%;
+ }
+
+ .login h1{
+    color: rgb(134, 239, 248);
+    text-shadow: 2px 2px 2px  rgb(3, 122, 181);
+}
+
+@media Screen and (max-width:767px){
+    .login{
+        margin:auto;
+        margin-top: 60px;
+        margin-bottom: 140px;
+    }
+   
+ }
