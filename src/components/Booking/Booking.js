@@ -54,7 +54,7 @@ const Booking = () => {
       </Form.Group>
 
 
-      <button className='sub-btn ' type='submit'><Link to='/hotel'>Start Booking</Link></button>
+      <button className='booking-btn ' type='submit'><Link to='/hotel' className='link fw-bold'>Start Booking</Link></button>
     </Form >
         </div></Col>
         </Row>

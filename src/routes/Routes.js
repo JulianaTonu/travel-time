@@ -21,7 +21,7 @@ import PrivateRouter from '../private/PrivateRouter';
             {
                 path:'/',
                 loader:async()=>{
-                    return fetch(`http://localhost:5000/destinations`)
+                    return fetch(`https://travel-server-iota.vercel.app/destinations`)
                 },
                 element:<Home></Home>
                 
@@ -41,14 +41,14 @@ import PrivateRouter from '../private/PrivateRouter';
             //     path:'/booking/:id',
             //     element:<Booking></Booking>,
 
-            //     // loader:({params})=>fetch(`http://localhost:5000/destinations/${params.id}`)
+            //     // loader:({params})=>fetch(`https://travel-server-iota.vercel.app/destinations/${params.id}`)
             // },
             {
                 path:'/booking/:id',
                 element:<Booking></Booking>,
-                loader: ({params})=>fetch(`http://localhost:5000/destinations/${params.id}`)
+                loader: ({params})=>fetch(`https://travel-server-iota.vercel.app/destinations/${params.id}`)
             },
-            {
+            { 
                 path:'/hotel',
                 element:<PrivateRouter><Hotel></Hotel></PrivateRouter>
             }

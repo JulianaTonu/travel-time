@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/UserContext';
 import './Login.css'
+import toast from 'react-hot-toast';
 
 const Login =() => {
   const location= useLocation()
@@ -27,6 +28,7 @@ signIn(email, password)
     console.log('login user',user)
     form.reset()
     navigate(from, {replace:true})
+toast.success("Successfully login")
 
 
 })
