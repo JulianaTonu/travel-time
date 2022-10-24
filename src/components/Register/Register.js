@@ -11,6 +11,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from '../../context/UserContext';
 // import { AuthContext } from '../../UserContext/UserContext';
+import { toast } from 'react-hot-toast';
 
         const Register = () => {
            const navigate =useNavigate()
@@ -29,6 +30,7 @@ import { AuthContext } from '../../context/UserContext';
                   const user =result.user
                   console.log(user)
                   form.reset()
+                  toast.success("Register completed")
                   navigate('/login')
                 })
                 .catch(error=>console.error(error))
