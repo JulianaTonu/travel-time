@@ -3,8 +3,8 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { useLoaderData } from 'react-router-dom';
-
+import { Link, useLoaderData } from 'react-router-dom';
+import './Booking.css'
 
 const Booking = () => {
   const desti =useLoaderData()
@@ -12,9 +12,9 @@ const Booking = () => {
         
              <Container className=''>
         <Row>
-          <Col  sm={11} lg={6} className='text-white'>
-          <h1 className='mt-5'>{desti.name}</h1>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero totam eaque, dignissimos quos earum, veritatis delectus quae autem vitae nobis molestiae quo velit accusantium illo, ea veniam qui aliquam corporis.</p>
+          <Col  sm={11} lg={6} className='text-white text-center'>
+          <h1 className='mt-5  py-3'>{desti.name}</h1>
+          <p>{desti.description}</p>
           </Col>
 
 
@@ -27,17 +27,17 @@ const Booking = () => {
 
       <Form.Group className="mb-3" controlId="formBasicOrigin">
         <Form.Label className='formlabel fw-bold'>Origin</Form.Label>
-        <Form.Control type="text" name="origin" placeholder="" />  
+        <Form.Control type="text" name="origin" placeholder=""/>  
       </Form.Group>
 
       <Form.Group className="mb-3 " controlId="formBasicPassword">
         <Form.Label className='formlabel fw-bold'>Destination</Form.Label>
-        <Form.Control type="text" name="destination" placeholder="" />
+        <Form.Control type="text" name="destination" placeholder={desti.name} />
       </Form.Group>
 
 
 
-      <Form.Group className="mb-3 d-flex ms-2 " controlId="formBasicPassword">
+      <Form.Group className="mb-3  ms-2 d-flex form-date" controlId="formBasicPassword">
 
        <div className='me-4'>
 
@@ -46,7 +46,7 @@ const Booking = () => {
        <Form.Control type="date" name="form" placeholder="" />
        </div>
 
-       <div>
+       <div className='me-4'>
        <Form.Label className='formlabel fw-bold'>To</Form.Label>
         <Form.Control type="date" name="to" placeholder="" />
        </div>
@@ -54,7 +54,7 @@ const Booking = () => {
       </Form.Group>
 
 
-      <button className='sub-btn ' type='submit'>Start Booking</button>
+      <button className='sub-btn ' type='submit'><Link to='/hotel'>Start Booking</Link></button>
     </Form >
         </div></Col>
         </Row>

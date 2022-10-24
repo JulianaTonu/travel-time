@@ -7,6 +7,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import './Header.css'
 import { useContext } from 'react';
 import { AuthContext } from '../../context/UserContext';
+import {FaUser } from "react-icons/fa";
+import {GiHorizonRoad } from "react-icons/gi";
 
 const Header = () => {
 
@@ -17,15 +19,19 @@ const Header = () => {
 
 <Navbar className='navbar  ' expand="lg">
       <Container>
-        <Navbar.Brand className='title text-info' href="#home">Travel Time</Navbar.Brand>
+        <Navbar.Brand className='title text-warning fs-4' href="#home"><GiHorizonRoad className='fs-3 '></GiHorizonRoad>Travel Time</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="">
             <NavLink className="px-3 ms-5 nav" to="/">Home</NavLink>
-            <NavLink className="px-3  nav" to="/booking">Booking</NavLink>
+            {/* <NavLink className="px-3  nav" to="/booking">Booking</NavLink> */}
             <NavLink className="px-3  nav" to="/login">Login</NavLink>
             <NavLink className="px-3  nav" to="/register">Register</NavLink>
-            {user?.email && <span className='text-white'>welcome , {user?.email}</span>}
+            <NavLink className="px-3  nav" to="/hotel">Hotel</NavLink>
+            <NavLink className="px-3  nav">{user?.email && <span className=' fs-5 fw-bold'>{user?.displayName}<FaUser className='me-2'></FaUser></span>}</NavLink>
+
+            
+            {/* {user?.email && <span className='text-info fs-5 fw-bold'>{user?.displayName}<FaUser className='me-2'></FaUser></span>} */}
            
           </Nav>
         </Navbar.Collapse>

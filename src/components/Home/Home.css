@@ -1,14 +1,32 @@
 
-.tour{
-    /* width: 200px;
-    height: 350px;
-    padding: 10px; */
+.tour{  
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    
-
+    grid-template-columns: repeat(2, 1fr); 
 }
+
 .tour p{
    font-size: 18px;
 }
 
+@media Screen and (max-width:767px){
+    .login{
+        margin:auto;
+        margin-top: 60px;
+        margin-bottom: 140px;
+    }
+   
+ }
+@media screen and (max-width:767px){
+
+    .text{
+        margin: auto;
+        padding: 10px;
+    }
+    .tour{  
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+    }
+    img{
+        margin: auto;
+    }
+}

@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
-import { AuthContext } from '../../context/UserContext';
+
+import {  useLoaderData } from 'react-router-dom';
 
 import SelectTour from '../SelectTour/SelectTour';
 import './Home.css'
@@ -10,18 +9,16 @@ import './Home.css'
 const Home = () => {
 const destinations =useLoaderData()
 
-  const{user}=useContext(AuthContext)
-
     return (
 
       <div className="container text-center">
   <div className="row">
-    <div className="col-4 my-5 text-white text-center">
-    <h1 className='mt-5'> Take a tour: {user?.displayName}{destinations.length}</h1>
+    <div className="col-lg-4 col-sm-12 my-5 text-white text-center text">
+    <h1 className='mt-5'> Take a tour: </h1>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor distinctio laborum inventore aliquam fugiat nemo nobis? Non similique mollitia deleniti. Explicabo atque suscipit provident nihil inventore, illum vero at magni?</p>
 
-            <button className='btn btn-warning'><Link to='/booking'>Booking</Link> </button>
+            
     </div>
 
 

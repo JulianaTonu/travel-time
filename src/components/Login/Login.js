@@ -4,11 +4,15 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/UserContext';
 import './Login.css'
 
 const Login =() => {
+  const location= useLocation()
+  const navigate =useNavigate()
+
+  const from =location.state?.pathname || '/';
 const {signIn}=useContext(AuthContext)
             
     const handleSubmit= event=>{
@@ -22,6 +26,8 @@ signIn(email, password)
     const user =result.user
     console.log('login user',user)
     form.reset()
+    navigate(from, {replace:true})
+
 
 })
 .catch(e=>console.error(e))
