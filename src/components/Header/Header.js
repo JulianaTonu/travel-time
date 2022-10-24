@@ -12,7 +12,13 @@ import {GiHorizonRoad } from "react-icons/gi";
 
 const Header = () => {
 
-  const {user} =useContext(AuthContext)
+  const {user, logOut} =useContext(AuthContext)
+
+  const handleLogout=()=>{
+    logOut()
+    .then(()=>{})
+    .catch(e=>console.error(e))
+  }
     return (
         <div>
 
@@ -25,10 +31,21 @@ const Header = () => {
           <Nav className="">
             <NavLink className="px-3 ms-5 nav" to="/">Home</NavLink>
             {/* <NavLink className="px-3  nav" to="/booking">Booking</NavLink> */}
-            <NavLink className="px-3  nav" to="/login">Login</NavLink>
-            <NavLink className="px-3  nav" to="/register">Register</NavLink>
+            {/* <NavLink className="px-3  nav" to="/login">Login</NavLink> */}
             <NavLink className="px-3  nav" to="/hotel">Hotel</NavLink>
+            <NavLink className="px-3  nav" to="/register">Register</NavLink>
             <NavLink className="px-3  nav">{user?.email && <span className=' fs-5 fw-bold'>{user?.displayName}<FaUser className='me-2'></FaUser></span>}</NavLink>
+
+{ user?.uid?
+<>
+<NavLink className="px-3  nav" ><button onClick={handleLogout} className='btn btn-info fw-bold'>logout</button></NavLink>
+</>
+:
+<>
+ <NavLink className="px-3  nav" to="/login">Login</NavLink>
+</>
+}
+            
 
             
             {/* {user?.email && <span className='text-info fs-5 fw-bold'>{user?.displayName}<FaUser className='me-2'></FaUser></span>} */}

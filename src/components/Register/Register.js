@@ -7,13 +7,13 @@ import Col from 'react-bootstrap/Col';
 
 import './Register.css'
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from '../../context/UserContext';
 // import { AuthContext } from '../../UserContext/UserContext';
 
         const Register = () => {
-           
+           const navigate =useNavigate()
        const {createUser,signInWithGoogle}=useContext(AuthContext)
             const handleSubmit= event =>{
                 event.preventDefault()
@@ -29,6 +29,7 @@ import { AuthContext } from '../../context/UserContext';
                   const user =result.user
                   console.log(user)
                   form.reset()
+                  navigate('/login')
                 })
                 .catch(error=>console.error(error))
             }
